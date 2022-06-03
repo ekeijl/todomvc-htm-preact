@@ -1,0 +1,13 @@
+*.orig
+.nyc_output/*
+coverage/*
+projectFilesBackup/.idea/*
+npm-debug.log
+.orig
+.chg
+.rej
+.conflict
+**/packagehash.txt
+**/.packagehash
+.idea/*
+.vscode/*
