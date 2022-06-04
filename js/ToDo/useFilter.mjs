@@ -1,4 +1,5 @@
 import { useState, useEffect } from '../modules.mjs';
+import { Filters } from './index.mjs';
 
 const getFilterFromHash = () => window.location.hash?.split('#/')[1];
 
