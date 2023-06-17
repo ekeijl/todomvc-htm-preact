@@ -1,0 +1,23 @@
+{
+    "name": "Todo app",
+    "short_name": "Todo app",
+    "start_url": "/",
+    "background_color": "#f5f5f5",
+    "theme_color": "#b83f45",
+    "icons": [
+        {
+            "src": "static/512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "static/192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "display": "standalone",
+    "orientation":"portrait"
+}
