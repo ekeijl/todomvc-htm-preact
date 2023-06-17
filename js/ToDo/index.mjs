@@ -1,12 +1,6 @@
-import { store } from './store.mjs';
-
-export const Filters = {
-	ALL: 'all',
-	ACTIVE: 'active',
-	COMPLETED: 'completed',
-};
-
+export { store } from './store.mjs';
+export { Todos } from './Todos.mjs';
+export { Filters } from './Filters.mjs';
 export { List }  from './List.mjs';
 export { useTodos } from './useTodos.mjs';
 export { useFilter } from './useFilter.mjs';
-export { store };

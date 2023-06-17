@@ -1,4 +1,4 @@
-import { html } from '../modules.mjs';
+import html from '../render.mjs';
 
 export const Footer = () => html`<footer class="info">
 	<p>Double-click to edit a todo</p>

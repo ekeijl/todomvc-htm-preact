@@ -1,18 +1,8 @@
-import { useEffect, useState, subscribe, snapshot } from '../modules.mjs';
+import { useSnapshot } from 'valtio';
 import { store } from './store.mjs';
 
 export const useTodos = () => {
-	const [, setTodos] = useState([]);
+	const snap = useSnapshot(store);
 
-	useEffect(() => {
-		setTodos(store.todos);
-	}, []);
-
-	useEffect(() => {
-		subscribe(store, () => {
-			setTodos(snapshot(store.todos));
-		});
-	}, []);
-
-	return store;
+	return snap.todos;
 };

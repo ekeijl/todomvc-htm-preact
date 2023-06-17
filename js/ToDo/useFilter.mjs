@@ -1,6 +1,5 @@
-import { useState, useEffect } from '../modules.mjs';
-import { Filters } from './index.mjs';
-
+import { useState, useEffect } from 'preact/compat';
+import { Filters } from './Filters.mjs';
 const getFilterFromHash = () => window.location.hash?.split('#/')[1];
 
 export const useFilter = () => {
@@ -8,9 +7,9 @@ export const useFilter = () => {
 
 	useEffect(() => {
 		window.addEventListener('hashchange', () => {
-			const value = getFilterFromHash();
-			if (Object.values(Filters).includes(value)) {
-				setFilter(value);
+			const filterValue = getFilterFromHash();
+			if (Object.values(Filters).includes(filterValue)) {
+				setFilter(filterValue);
 			}
 		});
 	}, []);

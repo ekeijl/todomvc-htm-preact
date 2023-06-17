@@ -1,4 +1,4 @@
-import { html } from '../modules.mjs';
+import html from '../render.mjs';
 import { Item } from './Item.mjs';
 import { Footer } from './Footer.mjs';
 import { store } from './store.mjs';
@@ -16,7 +16,7 @@ export const List = ({ todos, filter }) => {
 	const remaining = grouped[Filters.ACTIVE]?.length || 0;
 	const completed = grouped[Filters.COMPLETED]?.length || 0;
 
-	const filtered = filter === 'all' ? todos : grouped[filter] || [];
+	const filtered = !filter || filter === Filters.ALL ? todos : grouped[filter] || [];
 
 	return html`
 		<input
@@ -28,7 +28,7 @@ export const List = ({ todos, filter }) => {
 		/>
 		<label for="toggle-all">Mark all as complete</label>
 		<ul class="todo-list">
-			${filtered.map((todo) => html` <${Item} ...${todo} key=${todo.id} />`)}
+			${filtered.map((todo) => html`<${Item} ...${todo} key=${todo.id} />`)}
 		</ul>
 		${todos.length > 0 && html` <${Footer} remaining=${remaining} completed=${completed} filter=${filter} /> `}
 	`;

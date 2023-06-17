@@ -4,9 +4,21 @@
 		<title>No-build ToDo app</title>
 		<link rel="stylesheet" href="https://unpkg.com/todomvc-common@1.0.5/base.css" />
 		<link rel="stylesheet" href="https://unpkg.com/todomvc-app-css@2.4.2/index.css" />
+		<script type="importmap">
+			{
+				"imports": {
+					"uuid": "https://esm.sh/uuid",
+					"preact": "https://esm.sh/preact",
+					"preact/": "https://esm.sh/preact/",
+					"htm": "https://esm.sh/htm",
+					"valtio": "https://esm.sh/*valtio?alias=react:preact/compat",
+					"proxy-compare": "https://esm.sh/proxy-compare",
+					"use-sync-external-store/shim/index.js": "https://esm.sh/use-sync-external-store?alias=react:preact/compat"
+				}
+			}
+		</script>
 	</head>
-
 	<body>
-		<script type="module" src="js/index.mjs"></script>
+		<script type="module" src="js/App.mjs"></script>
 	</body>
 </html>

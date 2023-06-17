@@ -1,4 +1,5 @@
-import { html, useState, useRef } from '../modules.mjs';
+import { useState, useRef } from 'preact/hooks';
+import html from '../render.mjs';
 import { store, Filters } from './index.mjs';
 
 /**

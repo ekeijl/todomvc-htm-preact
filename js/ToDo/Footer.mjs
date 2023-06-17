@@ -1,4 +1,4 @@
-import { html } from '../modules.mjs';
+import html from '../render.mjs';
 import { store } from './index.mjs';
 import { Filters } from './index.mjs';
 
